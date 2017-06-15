@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED16BADB1EF177090051D99F /* EasyGCD.m */; };
+		ED16FAA91EF2727C0003331D /* NSObject+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */; };
+		ED4118311EB8C7D9001DC10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118301EB8C7D9001DC10B /* main.m */; };
+		ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118331EB8C7D9001DC10B /* AppDelegate.m */; };
+		ED4118371EB8C7D9001DC10B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118361EB8C7D9001DC10B /* ViewController.m */; };
+		ED41183A1EB8C7D9001DC10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4118381EB8C7D9001DC10B /* Main.storyboard */; };
+		ED41183C1EB8C7D9001DC10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41183B1EB8C7D9001DC10B /* Assets.xcassets */; };
+		ED41183F1EB8C7D9001DC10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED41183D1EB8C7D9001DC10B /* LaunchScreen.storyboard */; };
+		ED41184A1EB8C7D9001DC10B /* EasyBlockDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118491EB8C7D9001DC10B /* EasyBlockDemoTests.m */; };
+		ED4118551EB8C7D9001DC10B /* EasyBlockDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118541EB8C7D9001DC10B /* EasyBlockDemoUITests.m */; };
+		ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118691EB8D8EA001DC10B /* EasyEmpty.m */; };
+		ED49CC871EBA08570093B50D /* UIControl+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */; };
+		ED96CCD91EEB01E1003272AE /* EasyEventHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */; };
+		EDC4B60B1EEBE38F0044D1AD /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED4118461EB8C7D9001DC10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4118241EB8C7D9001DC10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED41182B1EB8C7D9001DC10B;
+			remoteInfo = EasyBlockDemo;
+		};
+		ED4118511EB8C7D9001DC10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4118241EB8C7D9001DC10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED41182B1EB8C7D9001DC10B;
+			remoteInfo = EasyBlockDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED16BADA1EF177090051D99F /* EasyGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyGCD.h; sourceTree = "<group>"; };
+		ED16BADB1EF177090051D99F /* EasyGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyGCD.m; sourceTree = "<group>"; };
+		ED16FAA71EF2727C0003331D /* NSObject+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EasyBlock.h"; sourceTree = "<group>"; };
+		ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EasyBlock.m"; sourceTree = "<group>"; };
+		ED41182C1EB8C7D9001DC10B /* EasyBlockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBlockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4118301EB8C7D9001DC10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED4118321EB8C7D9001DC10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED4118331EB8C7D9001DC10B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED4118351EB8C7D9001DC10B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED4118361EB8C7D9001DC10B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED4118391EB8C7D9001DC10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED41183B1EB8C7D9001DC10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED41183E1EB8C7D9001DC10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED4118401EB8C7D9001DC10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4118451EB8C7D9001DC10B /* EasyBlockDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBlockDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4118491EB8C7D9001DC10B /* EasyBlockDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyBlockDemoTests.m; sourceTree = "<group>"; };
+		ED41184B1EB8C7D9001DC10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4118501EB8C7D9001DC10B /* EasyBlockDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBlockDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4118541EB8C7D9001DC10B /* EasyBlockDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyBlockDemoUITests.m; sourceTree = "<group>"; };
+		ED4118561EB8C7D9001DC10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4118661EB8C8FC001DC10B /* EasyBlockHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlockHeader.h; sourceTree = "<group>"; };
+		ED4118671EB8C991001DC10B /* EasyBlock_typedef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyBlock_typedef.h; sourceTree = "<group>"; };
+		ED4118681EB8D8EA001DC10B /* EasyEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyEmpty.h; sourceTree = "<group>"; };
+		ED4118691EB8D8EA001DC10B /* EasyEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyEmpty.m; sourceTree = "<group>"; };
+		ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EasyBlock.h"; sourceTree = "<group>"; };
+		ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EasyBlock.m"; sourceTree = "<group>"; };
+		ED7C3FE81EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
+		ED7C3FE91EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
+		ED96CCD71EEB01E1003272AE /* EasyEventHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyEventHandle.h; sourceTree = "<group>"; };
+		ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyEventHandle.m; sourceTree = "<group>"; };
+		EDC4B6091EEBE38F0044D1AD /* UIView+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyBlock.h"; sourceTree = "<group>"; };
+		EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyBlock.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED4118291EB8C7D9001DC10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4118421EB8C7D9001DC10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED41184D1EB8C7D9001DC10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED16FA9D1EF233780003331D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ED7C3FE81EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.h */,
+				ED7C3FE91EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.m */,
+				ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */,
+				ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */,
+				EDC4B6091EEBE38F0044D1AD /* UIView+EasyBlock.h */,
+				EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ED16FA9E1EF233850003331D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118681EB8D8EA001DC10B /* EasyEmpty.h */,
+				ED4118691EB8D8EA001DC10B /* EasyEmpty.m */,
+				ED96CCD71EEB01E1003272AE /* EasyEventHandle.h */,
+				ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */,
+				ED16BADA1EF177090051D99F /* EasyGCD.h */,
+				ED16BADB1EF177090051D99F /* EasyGCD.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ED16FA9F1EF233AA0003331D /* header */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118661EB8C8FC001DC10B /* EasyBlockHeader.h */,
+				ED4118671EB8C991001DC10B /* EasyBlock_typedef.h */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		ED16FAA61EF2722B0003331D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ED16FAA71EF2727C0003331D /* NSObject+EasyBlock.h */,
+				ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ED4118231EB8C7D9001DC10B = {
+			isa = PBXGroup;
+			children = (
+				ED41182E1EB8C7D9001DC10B /* EasyBlockDemo */,
+				ED4118481EB8C7D9001DC10B /* EasyBlockDemoTests */,
+				ED4118531EB8C7D9001DC10B /* EasyBlockDemoUITests */,
+				ED41182D1EB8C7D9001DC10B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED41182D1EB8C7D9001DC10B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED41182C1EB8C7D9001DC10B /* EasyBlockDemo.app */,
+				ED4118451EB8C7D9001DC10B /* EasyBlockDemoTests.xctest */,
+				ED4118501EB8C7D9001DC10B /* EasyBlockDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED41182E1EB8C7D9001DC10B /* EasyBlockDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118621EB8C818001DC10B /* EasyBlock */,
+				ED4118321EB8C7D9001DC10B /* AppDelegate.h */,
+				ED4118331EB8C7D9001DC10B /* AppDelegate.m */,
+				ED4118351EB8C7D9001DC10B /* ViewController.h */,
+				ED4118361EB8C7D9001DC10B /* ViewController.m */,
+				ED4118381EB8C7D9001DC10B /* Main.storyboard */,
+				ED41183B1EB8C7D9001DC10B /* Assets.xcassets */,
+				ED41183D1EB8C7D9001DC10B /* LaunchScreen.storyboard */,
+				ED4118401EB8C7D9001DC10B /* Info.plist */,
+				ED41182F1EB8C7D9001DC10B /* Supporting Files */,
+			);
+			path = EasyBlockDemo;
+			sourceTree = "<group>";
+		};
+		ED41182F1EB8C7D9001DC10B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118301EB8C7D9001DC10B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED4118481EB8C7D9001DC10B /* EasyBlockDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118491EB8C7D9001DC10B /* EasyBlockDemoTests.m */,
+				ED41184B1EB8C7D9001DC10B /* Info.plist */,
+			);
+			path = EasyBlockDemoTests;
+			sourceTree = "<group>";
+		};
+		ED4118531EB8C7D9001DC10B /* EasyBlockDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED4118541EB8C7D9001DC10B /* EasyBlockDemoUITests.m */,
+				ED4118561EB8C7D9001DC10B /* Info.plist */,
+			);
+			path = EasyBlockDemoUITests;
+			sourceTree = "<group>";
+		};
+		ED4118621EB8C818001DC10B /* EasyBlock */ = {
+			isa = PBXGroup;
+			children = (
+				ED16FAA61EF2722B0003331D /* Common */,
+				ED16FA9F1EF233AA0003331D /* header */,
+				ED16FA9E1EF233850003331D /* Core */,
+				ED16FA9D1EF233780003331D /* UIKit */,
+			);
+			path = EasyBlock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED41182B1EB8C7D9001DC10B /* EasyBlockDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4118591EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemo" */;
+			buildPhases = (
+				ED4118281EB8C7D9001DC10B /* Sources */,
+				ED4118291EB8C7D9001DC10B /* Frameworks */,
+				ED41182A1EB8C7D9001DC10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyBlockDemo;
+			productName = EasyBlockDemo;
+			productReference = ED41182C1EB8C7D9001DC10B /* EasyBlockDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED4118441EB8C7D9001DC10B /* EasyBlockDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED41185C1EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemoTests" */;
+			buildPhases = (
+				ED4118411EB8C7D9001DC10B /* Sources */,
+				ED4118421EB8C7D9001DC10B /* Frameworks */,
+				ED4118431EB8C7D9001DC10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED4118471EB8C7D9001DC10B /* PBXTargetDependency */,
+			);
+			name = EasyBlockDemoTests;
+			productName = EasyBlockDemoTests;
+			productReference = ED4118451EB8C7D9001DC10B /* EasyBlockDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED41184F1EB8C7D9001DC10B /* EasyBlockDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED41185F1EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemoUITests" */;
+			buildPhases = (
+				ED41184C1EB8C7D9001DC10B /* Sources */,
+				ED41184D1EB8C7D9001DC10B /* Frameworks */,
+				ED41184E1EB8C7D9001DC10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED4118521EB8C7D9001DC10B /* PBXTargetDependency */,
+			);
+			name = EasyBlockDemoUITests;
+			productName = EasyBlockDemoUITests;
+			productReference = ED4118501EB8C7D9001DC10B /* EasyBlockDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED4118241EB8C7D9001DC10B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "徐仲平";
+				TargetAttributes = {
+					ED41182B1EB8C7D9001DC10B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+					};
+					ED4118441EB8C7D9001DC10B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED41182B1EB8C7D9001DC10B;
+					};
+					ED41184F1EB8C7D9001DC10B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 94Z9LKE2W7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED41182B1EB8C7D9001DC10B;
+					};
+				};
+			};
+			buildConfigurationList = ED4118271EB8C7D9001DC10B /* Build configuration list for PBXProject "EasyBlockDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED4118231EB8C7D9001DC10B;
+			productRefGroup = ED41182D1EB8C7D9001DC10B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED41182B1EB8C7D9001DC10B /* EasyBlockDemo */,
+				ED4118441EB8C7D9001DC10B /* EasyBlockDemoTests */,
+				ED41184F1EB8C7D9001DC10B /* EasyBlockDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED41182A1EB8C7D9001DC10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED41183F1EB8C7D9001DC10B /* LaunchScreen.storyboard in Resources */,
+				ED41183C1EB8C7D9001DC10B /* Assets.xcassets in Resources */,
+				ED41183A1EB8C7D9001DC10B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4118431EB8C7D9001DC10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED41184E1EB8C7D9001DC10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED4118281EB8C7D9001DC10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED96CCD91EEB01E1003272AE /* EasyEventHandle.m in Sources */,
+				ED4118371EB8C7D9001DC10B /* ViewController.m in Sources */,
+				ED49CC871EBA08570093B50D /* UIControl+EasyBlock.m in Sources */,
+				EDC4B60B1EEBE38F0044D1AD /* UIView+EasyBlock.m in Sources */,
+				ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */,
+				ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */,
+				ED16FAA91EF2727C0003331D /* NSObject+EasyBlock.m in Sources */,
+				ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */,
+				ED4118311EB8C7D9001DC10B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4118411EB8C7D9001DC10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED41184A1EB8C7D9001DC10B /* EasyBlockDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED41184C1EB8C7D9001DC10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4118551EB8C7D9001DC10B /* EasyBlockDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED4118471EB8C7D9001DC10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED41182B1EB8C7D9001DC10B /* EasyBlockDemo */;
+			targetProxy = ED4118461EB8C7D9001DC10B /* PBXContainerItemProxy */;
+		};
+		ED4118521EB8C7D9001DC10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED41182B1EB8C7D9001DC10B /* EasyBlockDemo */;
+			targetProxy = ED4118511EB8C7D9001DC10B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED4118381EB8C7D9001DC10B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED4118391EB8C7D9001DC10B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED41183D1EB8C7D9001DC10B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED41183E1EB8C7D9001DC10B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED4118571EB8C7D9001DC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED4118581EB8C7D9001DC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED41185A1EB8C7D9001DC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED41185B1EB8C7D9001DC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED41185D1EB8C7D9001DC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBlockDemo.app/EasyBlockDemo";
+			};
+			name = Debug;
+		};
+		ED41185E1EB8C7D9001DC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBlockDemo.app/EasyBlockDemo";
+			};
+			name = Release;
+		};
+		ED4118601EB8C7D9001DC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyBlockDemo;
+			};
+			name = Debug;
+		};
+		ED4118611EB8C7D9001DC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94Z9LKE2W7;
+				INFOPLIST_FILE = EasyBlockDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyBlockDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED4118271EB8C7D9001DC10B /* Build configuration list for PBXProject "EasyBlockDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4118571EB8C7D9001DC10B /* Debug */,
+				ED4118581EB8C7D9001DC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4118591EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED41185A1EB8C7D9001DC10B /* Debug */,
+				ED41185B1EB8C7D9001DC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED41185C1EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED41185D1EB8C7D9001DC10B /* Debug */,
+				ED41185E1EB8C7D9001DC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED41185F1EB8C7D9001DC10B /* Build configuration list for PBXNativeTarget "EasyBlockDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4118601EB8C7D9001DC10B /* Debug */,
+				ED4118611EB8C7D9001DC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED4118241EB8C7D9001DC10B /* Project object */;
+}
