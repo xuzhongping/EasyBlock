@@ -22,7 +22,7 @@ static dispatch_semaphore_t semaphoreLock_;
     });
 }
 
-- (void)addTouchEventHandleBlock:(EasyHandleBlock)block{
+- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block{
     
     EasyEventHandle *handle = [EasyEventHandle handle];
     
