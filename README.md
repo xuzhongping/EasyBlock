@@ -25,9 +25,9 @@
 2. 针对 GCD 的封装api
 ```
 	// 获得一个锁对象，上锁与解锁
-	dispatch_semaphore_t lock = easyGetLock();
-   easyLock(lock);
-   easyUnLock(lock);
+dispatch_semaphore_t lock = easyGetLock();
+easyLock(lock);
+easyUnLock(lock);
    
    // 针对多任务的 easyGetMultipleTaskLock
        dispatch_semaphore_t lock =  easyGetMultipleTaskLock();
@@ -51,8 +51,14 @@
 
 ## 支持Cocoapods
 ```
-	pod 'EasyBlock'
+pod 'EasyBlock'
 ```
+* 如果你使用 pod search 命令搜不到，请执行下面的命令更新自己的 cocoapods 官方索引库:
+
+```
+pod repo update
+```
+
 ## 联系我
 > 可以将发现的问题或有好的建议告诉我，邮箱: 1021057927@qq.com
 
