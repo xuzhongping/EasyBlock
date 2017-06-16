@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED16BADB1EF177090051D99F /* EasyGCD.m */; };
 		ED16FAA91EF2727C0003331D /* NSObject+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */; };
+		ED2BA96A1EF3755D002CE5F7 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BA9691EF3755D002CE5F7 /* GCDViewController.m */; };
 		ED4118311EB8C7D9001DC10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118301EB8C7D9001DC10B /* main.m */; };
 		ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118331EB8C7D9001DC10B /* AppDelegate.m */; };
-		ED4118371EB8C7D9001DC10B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118361EB8C7D9001DC10B /* ViewController.m */; };
 		ED41183A1EB8C7D9001DC10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4118381EB8C7D9001DC10B /* Main.storyboard */; };
 		ED41183C1EB8C7D9001DC10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED41183B1EB8C7D9001DC10B /* Assets.xcassets */; };
 		ED41183F1EB8C7D9001DC10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED41183D1EB8C7D9001DC10B /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		ED4118551EB8C7D9001DC10B /* EasyBlockDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118541EB8C7D9001DC10B /* EasyBlockDemoUITests.m */; };
 		ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118691EB8D8EA001DC10B /* EasyEmpty.m */; };
 		ED49CC871EBA08570093B50D /* UIControl+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */; };
+		ED7C3FEF1EF374B100E19322 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7C3FEE1EF374B100E19322 /* UIKitViewController.m */; };
 		ED96CCD91EEB01E1003272AE /* EasyEventHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */; };
 		EDC4B60B1EEBE38F0044D1AD /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */; };
 /* End PBXBuildFile section */
@@ -45,12 +46,14 @@
 		ED16BADB1EF177090051D99F /* EasyGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyGCD.m; sourceTree = "<group>"; };
 		ED16FAA71EF2727C0003331D /* NSObject+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EasyBlock.h"; sourceTree = "<group>"; };
 		ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EasyBlock.m"; sourceTree = "<group>"; };
+		ED2BA9681EF3755D002CE5F7 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		ED2BA9691EF3755D002CE5F7 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		ED2BA96B1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
+		ED2BA96C1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
 		ED41182C1EB8C7D9001DC10B /* EasyBlockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBlockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4118301EB8C7D9001DC10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED4118321EB8C7D9001DC10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ED4118331EB8C7D9001DC10B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ED4118351EB8C7D9001DC10B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ED4118361EB8C7D9001DC10B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ED4118391EB8C7D9001DC10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED41183B1EB8C7D9001DC10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED41183E1EB8C7D9001DC10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,8 +70,8 @@
 		ED4118691EB8D8EA001DC10B /* EasyEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyEmpty.m; sourceTree = "<group>"; };
 		ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EasyBlock.h"; sourceTree = "<group>"; };
 		ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EasyBlock.m"; sourceTree = "<group>"; };
-		ED7C3FE81EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
-		ED7C3FE91EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
+		ED7C3FED1EF374B100E19322 /* UIKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitViewController.h; sourceTree = "<group>"; };
+		ED7C3FEE1EF374B100E19322 /* UIKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitViewController.m; sourceTree = "<group>"; };
 		ED96CCD71EEB01E1003272AE /* EasyEventHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyEventHandle.h; sourceTree = "<group>"; };
 		ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyEventHandle.m; sourceTree = "<group>"; };
 		EDC4B6091EEBE38F0044D1AD /* UIView+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyBlock.h"; sourceTree = "<group>"; };
@@ -103,8 +106,8 @@
 		ED16FA9D1EF233780003331D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				ED7C3FE81EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.h */,
-				ED7C3FE91EF2DF2000E19322 /* UIBarButtonItem+EasyBlock.m */,
+				ED2BA96B1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.h */,
+				ED2BA96C1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.m */,
 				ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */,
 				ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */,
 				EDC4B6091EEBE38F0044D1AD /* UIView+EasyBlock.h */,
@@ -170,8 +173,10 @@
 				ED4118621EB8C818001DC10B /* EasyBlock */,
 				ED4118321EB8C7D9001DC10B /* AppDelegate.h */,
 				ED4118331EB8C7D9001DC10B /* AppDelegate.m */,
-				ED4118351EB8C7D9001DC10B /* ViewController.h */,
-				ED4118361EB8C7D9001DC10B /* ViewController.m */,
+				ED7C3FED1EF374B100E19322 /* UIKitViewController.h */,
+				ED7C3FEE1EF374B100E19322 /* UIKitViewController.m */,
+				ED2BA9681EF3755D002CE5F7 /* GCDViewController.h */,
+				ED2BA9691EF3755D002CE5F7 /* GCDViewController.m */,
 				ED4118381EB8C7D9001DC10B /* Main.storyboard */,
 				ED41183B1EB8C7D9001DC10B /* Assets.xcassets */,
 				ED41183D1EB8C7D9001DC10B /* LaunchScreen.storyboard */,
@@ -355,11 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED96CCD91EEB01E1003272AE /* EasyEventHandle.m in Sources */,
-				ED4118371EB8C7D9001DC10B /* ViewController.m in Sources */,
 				ED49CC871EBA08570093B50D /* UIControl+EasyBlock.m in Sources */,
 				EDC4B60B1EEBE38F0044D1AD /* UIView+EasyBlock.m in Sources */,
+				ED7C3FEF1EF374B100E19322 /* UIKitViewController.m in Sources */,
 				ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */,
 				ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */,
+				ED2BA96A1EF3755D002CE5F7 /* GCDViewController.m in Sources */,
 				ED16FAA91EF2727C0003331D /* NSObject+EasyBlock.m in Sources */,
 				ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */,
 				ED4118311EB8C7D9001DC10B /* main.m in Sources */,
@@ -527,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 94Z9LKE2W7;
 				INFOPLIST_FILE = EasyBlockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -539,6 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 94Z9LKE2W7;
 				INFOPLIST_FILE = EasyBlockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EasyBlock.EasyBlockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

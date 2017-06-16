@@ -19,7 +19,7 @@
 //    static dispatch_once_t onceToken;
 //    dispatch_once(&onceToken, ^{
 //        hookBlockTableKey_ = "hookBlockTableKey";
-//        semaphoreLock_ =  esayGetLock();
+//        semaphoreLock_ =  easyGetLock();
 //    });
 //}
 //- (void)easyHookInstanceMethodSelector:(SEL)selector hookType:(EASY_ASP_TYPE)type handleBlock:(EasyVoidBlock)block{

@@ -16,7 +16,7 @@
 
  @return lock instance
  */
-dispatch_semaphore_t esayGetLock(void);
+dispatch_semaphore_t easyGetLock(void);
 
 /**
  

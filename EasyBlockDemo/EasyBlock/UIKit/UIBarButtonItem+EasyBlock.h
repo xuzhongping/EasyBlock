@@ -10,5 +10,5 @@
 #import "EasyBlockHeader.h"
 
 @interface UIBarButtonItem (EasyBlock)
-- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block;
+- (void)addTouchEventHandleBlock:(EasyHandleBlock)block;
 @end

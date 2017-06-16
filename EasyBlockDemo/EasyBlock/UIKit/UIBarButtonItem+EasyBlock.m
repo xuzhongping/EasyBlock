@@ -18,11 +18,11 @@ static dispatch_semaphore_t semaphoreLock_;
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        semaphoreLock_ = easyGetLock();
+        semaphoreLock_ = esayGetLock();
     });
 }
 
-- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block{
+- (void)addTouchEventHandleBlock:(EasyHandleBlock)block{
     
     EasyEventHandle *handle = [EasyEventHandle handle];
     

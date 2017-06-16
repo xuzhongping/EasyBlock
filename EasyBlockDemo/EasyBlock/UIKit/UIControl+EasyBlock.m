@@ -23,7 +23,7 @@ static dispatch_semaphore_t semaphoreLock_;
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        semaphoreLock_ = esayGetLock();
+        semaphoreLock_ = easyGetLock();
     });
 }
 - (void)addEvent:(UIControlEvents)event handleBlock:(EasyVoidIdBlock)block{

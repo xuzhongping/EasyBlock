@@ -11,7 +11,7 @@
 
 @implementation EasyGCD
 
-dispatch_semaphore_t esayGetLock(void){
+dispatch_semaphore_t easyGetLock(void){
     return dispatch_semaphore_create(1);
 }
 
