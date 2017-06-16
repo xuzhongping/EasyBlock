@@ -2,7 +2,7 @@
 //  UIBarButtonItem+EasyBlock.m
 //  EasyBlockDemo
 //
-//  Created by 徐仲平 on 2017/6/15.
+//  Created by 徐仲平 on 2017/6/16.
 //  Copyright © 2017年 徐仲平. All rights reserved.
 //
 
@@ -18,11 +18,11 @@ static dispatch_semaphore_t semaphoreLock_;
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        semaphoreLock_ = esayGetLock();
+        semaphoreLock_ = easyGetLock();
     });
 }
 
-- (void)addTouchEventHandleBlock:(EasyHandleBlock)block{
+- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block{
     
     EasyEventHandle *handle = [EasyEventHandle handle];
     
@@ -51,5 +51,4 @@ static dispatch_semaphore_t semaphoreLock_;
     id value = objc_getAssociatedObject(self, property_HandlePoolKey_);
     return value;
 }
-
 @end

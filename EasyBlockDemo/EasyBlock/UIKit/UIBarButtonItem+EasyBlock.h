@@ -2,7 +2,7 @@
 //  UIBarButtonItem+EasyBlock.h
 //  EasyBlockDemo
 //
-//  Created by 徐仲平 on 2017/6/15.
+//  Created by 徐仲平 on 2017/6/16.
 //  Copyright © 2017年 徐仲平. All rights reserved.
 //
 
@@ -10,5 +10,5 @@
 #import "EasyBlockHeader.h"
 
 @interface UIBarButtonItem (EasyBlock)
-- (void)addTouchEventHandleBlock:(EasyHandleBlock)block;
+- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block;
 @end

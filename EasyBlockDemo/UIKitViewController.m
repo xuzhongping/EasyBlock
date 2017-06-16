@@ -9,6 +9,7 @@
 #import "UIKitViewController.h"
 #import "UIControl+EasyBlock.h"
 #import "UIView+EasyBlock.h"
+#import "UIBarButtonItem+EasyBlock.h"
 
 
 @interface UIKitViewController ()<UITextViewDelegate>

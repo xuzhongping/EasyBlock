@@ -19,6 +19,7 @@
 		ED4118551EB8C7D9001DC10B /* EasyBlockDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118541EB8C7D9001DC10B /* EasyBlockDemoUITests.m */; };
 		ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118691EB8D8EA001DC10B /* EasyEmpty.m */; };
 		ED49CC871EBA08570093B50D /* UIControl+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */; };
+		ED7904F91EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7904F81EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m */; };
 		ED7C3FEF1EF374B100E19322 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7C3FEE1EF374B100E19322 /* UIKitViewController.m */; };
 		ED96CCD91EEB01E1003272AE /* EasyEventHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED96CCD81EEB01E1003272AE /* EasyEventHandle.m */; };
 		EDC4B60B1EEBE38F0044D1AD /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */; };
@@ -48,8 +49,6 @@
 		ED16FAA81EF2727C0003331D /* NSObject+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EasyBlock.m"; sourceTree = "<group>"; };
 		ED2BA9681EF3755D002CE5F7 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		ED2BA9691EF3755D002CE5F7 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
-		ED2BA96B1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
-		ED2BA96C1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
 		ED41182C1EB8C7D9001DC10B /* EasyBlockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBlockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4118301EB8C7D9001DC10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED4118321EB8C7D9001DC10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +69,8 @@
 		ED4118691EB8D8EA001DC10B /* EasyEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyEmpty.m; sourceTree = "<group>"; };
 		ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EasyBlock.h"; sourceTree = "<group>"; };
 		ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EasyBlock.m"; sourceTree = "<group>"; };
+		ED7904F71EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
+		ED7904F81EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
 		ED7C3FED1EF374B100E19322 /* UIKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitViewController.h; sourceTree = "<group>"; };
 		ED7C3FEE1EF374B100E19322 /* UIKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitViewController.m; sourceTree = "<group>"; };
 		ED96CCD71EEB01E1003272AE /* EasyEventHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyEventHandle.h; sourceTree = "<group>"; };
@@ -106,12 +107,12 @@
 		ED16FA9D1EF233780003331D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				ED2BA96B1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.h */,
-				ED2BA96C1EF37A19002CE5F7 /* UIBarButtonItem+EasyBlock.m */,
 				ED49CC851EBA08570093B50D /* UIControl+EasyBlock.h */,
 				ED49CC861EBA08570093B50D /* UIControl+EasyBlock.m */,
 				EDC4B6091EEBE38F0044D1AD /* UIView+EasyBlock.h */,
 				EDC4B60A1EEBE38F0044D1AD /* UIView+EasyBlock.m */,
+				ED7904F71EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.h */,
+				ED7904F81EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -366,6 +367,7 @@
 				ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */,
 				ED41186A1EB8D8EA001DC10B /* EasyEmpty.m in Sources */,
 				ED2BA96A1EF3755D002CE5F7 /* GCDViewController.m in Sources */,
+				ED7904F91EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m in Sources */,
 				ED16FAA91EF2727C0003331D /* NSObject+EasyBlock.m in Sources */,
 				ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */,
 				ED4118311EB8C7D9001DC10B /* main.m in Sources */,
