@@ -66,4 +66,4 @@ pod repo update
 
 ## License
 
-PPDelegate is available under the MIT license. See the LICENSE file for more info.
+EasyBlock is available under the MIT license. See the LICENSE file for more info.
