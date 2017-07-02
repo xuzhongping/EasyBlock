@@ -13,19 +13,13 @@
 
 
 @interface UIControl ()
-
+@property dispatch_semaphore_t  lock;
+@property NSMutableArray        *handleCallBackPool;
 @end
 
 @implementation UIControl (EasyBlock)
-static const char * property_HandlePoolKey_ = "property_HandlePoolKey";
-static dispatch_semaphore_t semaphoreLock_;
-
-+(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        semaphoreLock_ = easyGetLock();
-    });
-}
+static const char * property_handlePoolKey_ = "property_handlePoolKey";
+static const char * property_lockKey_       = "property_lockKey";
 - (void)addEvent:(UIControlEvents)event handleBlock:(EasyVoidIdBlock)block{
     
 #ifdef DEBUG
@@ -39,13 +33,9 @@ static dispatch_semaphore_t semaphoreLock_;
     NSString *controlEventStr = [NSString stringWithFormat:@"%@%ld",EasyControlPrefix,event];
     EasyEventHandle *handle = [EasyEventHandle handle];
     
-    easyLock(semaphoreLock_);
-    NSMutableArray *handlePool = [self getHandlePoolProperty];
-    if (handlePool == nil || ![handlePool isKindOfClass:[NSMutableArray class]]) {
-        [self setHandlePoolProperty];
-        handlePool =[self getHandlePoolProperty];
-    }
-    easyUnLock(semaphoreLock_);
+    easyLock([self lock]);
+    NSMutableArray *handlePool = [self handleCallBackPool];
+    easyUnLock([self lock]);
     
     [handlePool addObject:handle];
     [handle setHandBlock:block];
@@ -58,11 +48,30 @@ static dispatch_semaphore_t semaphoreLock_;
 #pragma mark - set && get
 
 - (void)setHandlePoolProperty{
-    objc_setAssociatedObject(self, property_HandlePoolKey_,@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, property_handlePoolKey_,@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSMutableArray *)getHandlePoolProperty{
-    id value = objc_getAssociatedObject(self, property_HandlePoolKey_);
+    id value = objc_getAssociatedObject(self, property_handlePoolKey_);
     return value;
 }
 
+- (void)setSemaphoreLock:(dispatch_semaphore_t)lock{
+    objc_setAssociatedObject(self, property_lockKey_,lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (dispatch_semaphore_t)getSemaphoreLock{
+    return objc_getAssociatedObject(self, property_lockKey_);
+}
+
+- (dispatch_semaphore_t)lock{
+    if (![self getSemaphoreLock]) {
+        [self setSemaphoreLock:easyGetLock()];
+    }
+    return [self getSemaphoreLock];
+}
+- (NSMutableArray *)handleCallBackPool{
+    if (![self getHandlePoolProperty]) {
+        [self setHandlePoolProperty];
+    }
+    return [self getHandlePoolProperty];
+}
 @end

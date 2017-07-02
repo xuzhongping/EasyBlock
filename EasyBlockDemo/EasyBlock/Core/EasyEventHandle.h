@@ -13,6 +13,6 @@
 @interface EasyEventHandle : NSObject
 + (instancetype )handle;
 @property (nonatomic, copy,readwrite) id handBlock;
-@property (nonatomic,weak,readwrite)id source;
+@property (nonatomic, weak,readwrite) id source;
 
 @end

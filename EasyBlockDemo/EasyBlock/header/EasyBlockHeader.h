@@ -15,6 +15,7 @@
 #define EasyGesturePrefix @"EasyGesturePrefix"
 #define EasyBarButtonAction @"EasyBarButtonAction"
 
+#define EasyTupleElementKey @"EasyTupleElementKey"
 
 #endif /* EasyBlockHeader_h */
 

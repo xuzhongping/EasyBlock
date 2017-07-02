@@ -11,16 +11,13 @@
 #import <objc/message.h>
 #import "EasyGCD.h"
 
+@interface UIView ()
+@property dispatch_semaphore_t  lock;
+@end
 @implementation UIView (EasyBlock)
 static const char * property_HandlePoolKey_ = "property_HandlePoolKey";
-static dispatch_semaphore_t semaphoreLock_;
+static const char * property_lockKey_       = "property_lockKey";
 
-+(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        semaphoreLock_ = easyGetLock();
-    });
-}
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
 #ifdef DEBUG
     if (!gestureRecognizer) {
@@ -33,13 +30,13 @@ static dispatch_semaphore_t semaphoreLock_;
     
     EasyEventHandle *handle = [EasyEventHandle handle];
     
-    easyLock(semaphoreLock_);
+    easyLock([self lock]);
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];
     if (handlePool == nil || ![handlePool isKindOfClass:[NSMutableArray class]]) {
         [self setHandlePoolPropertyForInstance:gestureRecognizer];
         handlePool =[self getHandlePoolPropertyForInstance:gestureRecognizer];
     }
-    easyUnLock(semaphoreLock_);
+    easyUnLock([self lock]);
     
     [handlePool addObject:handle];
     [handle setHandBlock:handleBlock];
@@ -63,5 +60,19 @@ static dispatch_semaphore_t semaphoreLock_;
 - (NSMutableArray *)getHandlePoolPropertyForInstance:(id)instance{
     id value = objc_getAssociatedObject(instance, property_HandlePoolKey_);
     return value;
+}
+
+- (void)setSemaphoreLock:(dispatch_semaphore_t)lock{
+    objc_setAssociatedObject(self, property_lockKey_,lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (dispatch_semaphore_t)getSemaphoreLock{
+    return objc_getAssociatedObject(self, property_lockKey_);
+}
+
+- (dispatch_semaphore_t)lock{
+    if (![self getSemaphoreLock]) {
+        [self setSemaphoreLock:easyGetLock()];
+    }
+    return [self getSemaphoreLock];
 }
 @end

@@ -26,6 +26,7 @@
     [self addSubViews];
     [self defineLayouts];
     [self handleEvent];
+    
 }
 
 - (void)addSubViews{
@@ -41,7 +42,7 @@
         NSLog(@"%@被点击了1",instanceSelf);
     }];
     [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
-        NSLog(@"%@被点击了2",instanceSelf);
+       
     }];
     
     [self.view addGestureRecognizer:[UITapGestureRecognizer new] handleBlock:^(id instanceSelf) {
@@ -53,6 +54,8 @@
     [self.swith addEvent:UIControlEventValueChanged handleBlock:^(id instanceSelf) {
         NSLog(@"%@",instanceSelf);
     }];
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+    NSLog(@"%@",path);
 }
 
 
