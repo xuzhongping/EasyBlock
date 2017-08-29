@@ -72,6 +72,8 @@ pod repo update
 
 > 可以直接在此提 Issues 与 pull
 
+> ==技术交流QQ群群员招募中== ，群ID是 **604609288**  [点这里直接加群噢!](<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f4c9cbd5a575cf3872d4c7ad841277924c041bbbf7f3d0c19f26337e6a9a89f7"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="是程序员真是太好了" title="是程序员真是太好了"></a>)
+
 ## License
 
 EasyBlock is available under the MIT license. See the LICENSE file for more info.
