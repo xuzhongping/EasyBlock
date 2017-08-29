@@ -12,42 +12,68 @@
 #import <objc/message.h>
 
 @interface EasyEventHandle()
-@property (nonatomic, strong) NSMutableDictionary *methodBlockPool;
+@property (nonatomic,assign,getter=isIgnore)BOOL ignore;
 @end;
 
 @implementation EasyEventHandle
 
 + (instancetype)handle{
-    return [[self alloc]init];
+    EasyEventHandle *handle = [[self alloc]init];
+    [handle setIgnore:NO];
+    return handle;
 }
 - (id)forwardingTargetForSelector:(SEL)aSelector{
     NSString *aSelectorStr = NSStringFromSelector(aSelector);
     if (aSelectorStr == nil) {
         return [EasyEmpty empty];
     }
-    NSRange controlRange = [aSelectorStr rangeOfString:EasyControlPrefix];
-    NSRange gestureRange = [aSelectorStr rangeOfString:EasyGesturePrefix];
-    NSRange barButtonRange = [aSelectorStr rangeOfString:EasyBarButtonAction];
+    
+    /*************************** handle source ********************************/
+    NSRange controlRange    = [aSelectorStr rangeOfString:EasyControlPrefix];
+    NSRange gestureRange    = [aSelectorStr rangeOfString:EasyGesturePrefix];
+    NSRange barButtonRange  = [aSelectorStr rangeOfString:EasyBarButtonAction];
+    
+    EasyVoidIdBlock block = nil;
+    
     if (controlRange.length >= 1) { // if the selector from UIControlEvent
         NSString *controlEventStr = [aSelectorStr substringFromIndex:controlRange.location + controlRange.length];
-        NSUInteger controlEventUInteger = [controlEventStr integerValue];
-        if (controlEventUInteger &  0xFFFFFFFF) {
+        NSUInteger controlEventType = [controlEventStr integerValue];
+        if (controlEventType &  0xFFFFFFFF) {
             if (self.handBlock) {
-                EasyVoidIdBlock block = self.handBlock;
-                block(_source);
+                block = self.handBlock;
             }
         }
+        
     }else if (gestureRange.length >= 1){ // if the selector from UIGestureRecognizer
         if (self.handBlock) {
-            EasyVoidIdBlock block = self.handBlock;
-            block(_source);
+                block = self.handBlock;
         }
+        
     }else if (barButtonRange.length >= 1){ // if the selector from UIBarButtonItem action
         if (self.handBlock) {
-            EasyVoidIdBlock block = self.handBlock;
-            block(_source);
+                block = self.handBlock;
         }
     }
+    /*************************************************************************/
+    
+   /*************************** handle ignore ********************************/
+    
+    if ([self isIgnore]) {
+        return [EasyEmpty empty];
+    }else{
+        block(_source);
+    }
+    if (_ignoreDuration == 0.0) {
+        block(_source);
+        return [EasyEmpty empty];
+    }
+    
+    [self setIgnore:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(_ignoreDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setIgnore:NO];
+    });
+        
+    /*************************************************************************/
     
     return [EasyEmpty empty];
 }

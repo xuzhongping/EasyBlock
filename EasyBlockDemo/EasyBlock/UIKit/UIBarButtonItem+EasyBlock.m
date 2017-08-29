@@ -23,7 +23,9 @@ static const char * property_lockKey_       = "property_lockKey";
 
 
 - (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block{
-    
+    [self addTouchEventHandleBlock:block ignoreDuration:0.0];
+}
+- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration{
     EasyEventHandle *handle = [EasyEventHandle handle];
     
     easyLock([self lock]);
@@ -33,10 +35,10 @@ static const char * property_lockKey_       = "property_lockKey";
     [handlePool addObject:handle];
     [handle setHandBlock:block];
     [handle setSource:self];
+    [handle setIgnoreDuration:duration];
     [self setTarget:handle];
     [self setAction:NSSelectorFromString(EasyBarButtonAction)];
 }
-
 
 #pragma mark - set && get
 

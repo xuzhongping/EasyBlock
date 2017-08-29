@@ -13,15 +13,21 @@
 
 
 @interface UIControl ()
-@property dispatch_semaphore_t  lock;
-@property NSMutableArray        *handleCallBackPool;
+@property (nonatomic,strong) dispatch_semaphore_t   lock;
+@property (nonatomic,strong) NSMutableArray         *handleCallBackPool;
+
 @end
 
 @implementation UIControl (EasyBlock)
+
 static const char * property_handlePoolKey_ = "property_handlePoolKey";
 static const char * property_lockKey_       = "property_lockKey";
+
 - (void)addEvent:(UIControlEvents)event handleBlock:(EasyVoidIdBlock)block{
-    
+    [self addEVent:event ignoreDuration:0.0 handleBlock:block];
+}
+
+- (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
 #ifdef DEBUG
     if (event == 0) {
         NSException *exception = [[NSException alloc] initWithName:@"warning" reason:[NSString stringWithFormat:@"the event (%ld) is nil",event] userInfo:nil];
@@ -40,10 +46,9 @@ static const char * property_lockKey_       = "property_lockKey";
     [handlePool addObject:handle];
     [handle setHandBlock:block];
     [handle setSource:self];
+    [handle setIgnoreDuration:duration];
     [self addTarget:handle action:NSSelectorFromString(controlEventStr) forControlEvents:event];
 }
-
-
 
 #pragma mark - set && get
 
@@ -74,4 +79,5 @@ static const char * property_lockKey_       = "property_lockKey";
     }
     return [self getHandlePoolProperty];
 }
+
 @end

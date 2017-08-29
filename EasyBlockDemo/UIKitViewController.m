@@ -38,24 +38,30 @@
     self.swith.frame = CGRectMake(100, 200, 0, 0);
 }
 - (void)handleEvent{
-    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
+//    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
+//
+//    }];
+    [self.btnOne addEVent:UIControlEventTouchUpInside ignoreDuration:2.0 handleBlock:^(id instanceSelf) {
         NSLog(@"%@被点击了1",instanceSelf);
     }];
-    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
-       
-    }];
-    
-    [self.view addGestureRecognizer:[UITapGestureRecognizer new] handleBlock:^(id instanceSelf) {
+    [self.view addGestureRecognizer:[UITapGestureRecognizer new] ignoreDuration:2.0 handleBlock:^(id instanceSelf) {
         NSLog(@"%@",instanceSelf);
     }];
-    [self.view addGestureRecognizer:self.longG handleBlock:^(id instanceSelf) {
-        NSLog(@"%@",instanceSelf);
-    }];
-    [self.swith addEvent:UIControlEventValueChanged handleBlock:^(id instanceSelf) {
-        NSLog(@"%@",instanceSelf);
-    }];
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
-    NSLog(@"%@",path);
+//    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
+//       
+//    }];
+//    
+//    [self.view addGestureRecognizer:[UITapGestureRecognizer new] handleBlock:^(id instanceSelf) {
+//        NSLog(@"%@",instanceSelf);
+//    }];
+//    [self.view addGestureRecognizer:self.longG handleBlock:^(id instanceSelf) {
+//        NSLog(@"%@",instanceSelf);
+//    }];
+//    [self.swith addEvent:UIControlEventValueChanged handleBlock:^(id instanceSelf) {
+//        NSLog(@"%@",instanceSelf);
+//    }];
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+//    NSLog(@"%@",path);
 }
 
 

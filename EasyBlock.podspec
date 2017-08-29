@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "EasyBlock"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "a easy function for Block"
 
   s.platform     = :ios, '6.0'

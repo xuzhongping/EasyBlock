@@ -9,9 +9,10 @@
 #ifndef EasyBlock_typedef_h
 #define EasyBlock_typedef_h
 
+typedef id(^EasyIdIdBlock)(id instanceSelf);
+typedef void(^EasyVoidIdBlock)(id instanceSelf);
+typedef void(^EasyVoidBlock)(void);
 
 #endif /* EasyBlock_typedef_h */
 
-typedef id(^EasyIdIdBlock)(id instanceSelf);
-typedef void(^EasyVoidIdBlock)(id instanceSelf);
-typedef void(^EasyVoidBlock)();
+
