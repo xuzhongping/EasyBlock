@@ -22,14 +22,8 @@ static const char * property_lockKey_       = "property_lockKey";
     [self addGestureRecognizer:gestureRecognizer ignoreDuration:0.0 handleBlock:handleBlock];
 }
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)handleBlock{
-#ifdef DEBUG
-    if (!gestureRecognizer) {
-        NSException *exception = [[NSException alloc] initWithName:@"warning" reason:[NSString stringWithFormat:@"the gestureRecognizer (%@) is nil",gestureRecognizer] userInfo:nil];
-        @throw  exception;
-    }
-#else
-    return;
-#endif
+    
+    NSParameterAssert(gestureRecognizer);
     
     EasyEventHandle *handle = [EasyEventHandle handle];
     
@@ -49,6 +43,8 @@ static const char * property_lockKey_       = "property_lockKey";
     [gestureRecognizer addTarget:handle action:NSSelectorFromString([NSString stringWithFormat:@"%@%ld",EasyGesturePrefix,gestureRecognizer.hash])];
 }
 - (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
+    NSParameterAssert(gestureRecognizer);
+    
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];
     [handlePool removeAllObjects];
     [self removeGestureRecognizer:gestureRecognizer];

@@ -26,8 +26,8 @@ static const char * property_lockKey_       = "property_lockKey";
     [self addTouchEventHandleBlock:block ignoreDuration:0.0];
 }
 - (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration{
-    EasyEventHandle *handle = [EasyEventHandle handle];
     
+    EasyEventHandle *handle = [EasyEventHandle handle];
     easyLock([self lock]);
     NSMutableArray *handlePool = [self handleCallBackPool];
     easyUnLock([self lock]);

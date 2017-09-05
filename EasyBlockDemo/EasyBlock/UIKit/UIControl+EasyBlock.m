@@ -28,14 +28,9 @@ static const char * property_lockKey_       = "property_lockKey";
 }
 
 - (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
-#ifdef DEBUG
-    if (event == 0) {
-        NSException *exception = [[NSException alloc] initWithName:@"warning" reason:[NSString stringWithFormat:@"the event (%ld) is nil",event] userInfo:nil];
-        @throw  exception;
-    }
-#else
-    return;
-#endif
+    
+    NSParameterAssert(event);
+    
     NSString *controlEventStr = [NSString stringWithFormat:@"%@%ld",EasyControlPrefix,event];
     EasyEventHandle *handle = [EasyEventHandle handle];
     

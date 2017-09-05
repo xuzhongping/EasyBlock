@@ -35,7 +35,8 @@
     
     EasyVoidIdBlock block = nil;
     
-    if (controlRange.length >= 1) { // if the selector from UIControlEvent
+    // if the selector from UIControlEvent
+    if (controlRange.length >= 1) {
         NSString *controlEventStr = [aSelectorStr substringFromIndex:controlRange.location + controlRange.length];
         NSUInteger controlEventType = [controlEventStr integerValue];
         if (controlEventType &  0xFFFFFFFF) {
@@ -44,15 +45,21 @@
             }
         }
         
-    }else if (gestureRange.length >= 1){ // if the selector from UIGestureRecognizer
+    // if the selector from UIGestureRecognizer
+    }else if (gestureRange.length >= 1){
         if (self.handBlock) {
                 block = self.handBlock;
         }
         
-    }else if (barButtonRange.length >= 1){ // if the selector from UIBarButtonItem action
+    // if the selector from UIBarButtonItem action
+    }else if (barButtonRange.length >= 1){
         if (self.handBlock) {
                 block = self.handBlock;
         }
+    }
+    
+    if (!block) {
+        return [EasyEmpty empty];
     }
     /*************************************************************************/
     
