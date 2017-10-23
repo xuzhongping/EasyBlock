@@ -7,7 +7,7 @@
 //
 
 #import "UIView+EasyBlock.h"
-#import "EasyEventHandle.h"
+#import "EasyEventHandler.h"
 #import <objc/message.h>
 #import "EasyGCD.h"
 
@@ -25,7 +25,7 @@ static const char * property_lockKey_       = "property_lockKey";
     
     NSParameterAssert(gestureRecognizer);
     
-    EasyEventHandle *handle = [EasyEventHandle handle];
+    EasyEventHandler *handle = [EasyEventHandler handler];
     
     easyLock([self lock]);
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];

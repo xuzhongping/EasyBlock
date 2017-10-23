@@ -9,7 +9,7 @@
 #import "UIBarButtonItem+EasyBlock.h"
 #import "EasyGCD.h"
 #import <objc/message.h>
-#import "EasyEventHandle.h"
+#import "EasyEventHandler.h"
 
 
 @interface UIBarButtonItem()
@@ -27,7 +27,7 @@ static const char * property_lockKey_       = "property_lockKey";
 }
 - (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration{
     
-    EasyEventHandle *handle = [EasyEventHandle handle];
+    EasyEventHandler *handle = [EasyEventHandler handler];
     easyLock([self lock]);
     NSMutableArray *handlePool = [self handleCallBackPool];
     easyUnLock([self lock]);

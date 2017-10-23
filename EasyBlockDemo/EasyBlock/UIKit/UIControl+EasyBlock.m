@@ -8,7 +8,7 @@
 
 #import "UIControl+EasyBlock.h"
 #import <objc/message.h>
-#import "EasyEventHandle.h"
+#import "EasyEventHandler.h"
 #import "EasyGCD.h"
 
 
@@ -32,7 +32,7 @@ static const char * property_lockKey_       = "property_lockKey";
     NSParameterAssert(event);
     
     NSString *controlEventStr = [NSString stringWithFormat:@"%@%ld",EasyControlPrefix,event];
-    EasyEventHandle *handle = [EasyEventHandle handle];
+    EasyEventHandler *handle = [EasyEventHandler handler];
     
     easyLock([self lock]);
     NSMutableArray *handlePool = [self handleCallBackPool];

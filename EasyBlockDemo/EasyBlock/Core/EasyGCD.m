@@ -75,7 +75,7 @@ dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name){
 }
 void easyGCDAsyncConcurrentQueue(char *queue_name,EasyVoidBlock block){
     
-    dispatch_queue_t concurrentQueue = easyCGDGetSerialQueue(queue_name);
+    dispatch_queue_t concurrentQueue = easyCGDGetConcurrentQueue(queue_name);
     dispatch_async(concurrentQueue, ^{
         if (block) {
             block();

@@ -6,19 +6,19 @@
 //  Copyright © 2017年 JungHsu. All rights reserved.
 //
 
-#import "EasyEventHandle.h"
+#import "EasyEventHandler.h"
 #import "EasyEmpty.h"
 #import "EasyBlockHeader.h"
 #import <objc/message.h>
 
-@interface EasyEventHandle()
+@interface EasyEventHandler()
 @property (nonatomic,assign,getter=isIgnore)BOOL ignore;
 @end;
 
-@implementation EasyEventHandle
+@implementation EasyEventHandler
 
-+ (instancetype)handle{
-    EasyEventHandle *handle = [[self alloc]init];
++ (instancetype)handler{
+    EasyEventHandler *handle = [[self alloc]init];
     [handle setIgnore:NO];
     return handle;
 }
