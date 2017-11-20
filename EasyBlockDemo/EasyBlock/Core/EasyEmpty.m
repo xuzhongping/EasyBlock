@@ -10,8 +10,7 @@
 #import <objc/message.h>
 
 @implementation EasyEmpty
-void emptyMethod(){
-}
+void emptyMethod(){}
 + (instancetype)empty{
     return [[self alloc]init];
 }

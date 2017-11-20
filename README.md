@@ -33,9 +33,9 @@
 2. 针对 GCD 的封装api
 ```
 	// 获得一个锁对象，上锁与解锁
-dispatch_semaphore_t lock = easyGetLock();
-easyLock(lock);
-easyUnLock(lock);
+	dispatch_semaphore_t lock = easyGetLock();
+	easyLock(lock);
+	easyUnLock(lock);
    
    // 针对多任务的 easyGetMultipleTaskLock
        dispatch_semaphore_t lock =  easyGetMultipleTaskLock();
@@ -72,7 +72,7 @@ pod repo update
 
 > 可以直接在此提 Issues 与 pull
 
-> 技术交流QQ群群员招募中 ，群ID是 **604609288**
+> 技术交流QQ群群员招募中 ，群IDbase64: **NjA0NjA5Mjg4**
 
 ## License
 

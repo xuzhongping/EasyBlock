@@ -15,8 +15,8 @@
 @property dispatch_semaphore_t  lock;
 @end
 @implementation UIView (EasyBlock)
-static const char * property_HandlePoolKey_ = "property_HandlePoolKey";
-static const char * property_lockKey_       = "property_lockKey";
+static const char * property_HandlePoolKey = "property_HandlePoolKey";
+static const char * property_lockKey       = "property_lockKey";
 
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
     [self addGestureRecognizer:gestureRecognizer ignoreDuration:0.0 handleBlock:handleBlock];
@@ -48,6 +48,7 @@ static const char * property_lockKey_       = "property_lockKey";
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];
     [handlePool removeAllObjects];
     [self removeGestureRecognizer:gestureRecognizer];
+    
     if (handleBlock) {
         handleBlock(nil);
     }
@@ -55,18 +56,17 @@ static const char * property_lockKey_       = "property_lockKey";
 #pragma mark - set && get
 
 - (void)setHandlePoolPropertyForInstance:(id)instance{
-    objc_setAssociatedObject(instance, property_HandlePoolKey_,@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(instance, property_HandlePoolKey,@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSMutableArray *)getHandlePoolPropertyForInstance:(id)instance{
-    id value = objc_getAssociatedObject(instance, property_HandlePoolKey_);
-    return value;
+    return objc_getAssociatedObject(instance, property_HandlePoolKey);
 }
 
 - (void)setSemaphoreLock:(dispatch_semaphore_t)lock{
-    objc_setAssociatedObject(self, property_lockKey_,lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, property_lockKey,lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (dispatch_semaphore_t)getSemaphoreLock{
-    return objc_getAssociatedObject(self, property_lockKey_);
+    return objc_getAssociatedObject(self, property_lockKey);
 }
 
 - (dispatch_semaphore_t)lock{

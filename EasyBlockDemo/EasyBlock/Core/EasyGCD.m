@@ -31,8 +31,8 @@ dispatch_semaphore_t easyGetMultipleTaskLock(void){
 
 void easyMultipleTaskLockCount(dispatch_semaphore_t lock, int taskCount,EasyVoidBlock block){
     if (taskCount == 0) return;
-    
-    easyGCDAsyncConcurrentQueue(NULL, ^{
+
+    easyGCDAsyncSerialQueue(NULL, ^{
         for (int i = 0; i < taskCount; i++) {
             easyLock(lock);
         }
@@ -65,6 +65,7 @@ void easyGCDAsyncSerialQueue(char *queue_name,EasyVoidBlock block){
         }
     });
 }
+
 
 dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name){
     if (queue_name == NULL || strlen(queue_name) == 0) {
