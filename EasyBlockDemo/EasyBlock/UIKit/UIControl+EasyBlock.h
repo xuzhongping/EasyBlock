@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EasyBlockHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface UIControl (EasyBlock)
 
 /**
@@ -17,7 +18,7 @@
  @param event event type
  @param block callback
  */
-- (void)addEvent:(UIControlEvents)event handleBlock:(EasyVoidIdBlock)block;
+- (void)addEvent:(UIControlEvents)event handleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
  add block handle event,can set ignore duration
@@ -26,5 +27,7 @@
  @param duration ignore duration
  @param block callback
  */
-- (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block;
+- (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(nullable EasyVoidIdBlock)block;
 @end
+
+NS_ASSUME_NONNULL_END

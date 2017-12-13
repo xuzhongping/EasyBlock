@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "EasyBlockHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface EasyGCD : NSObject
 
 /**
@@ -84,7 +86,7 @@ dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name);
  @param queue_name queue name
  @param block do something
  */
-void easyGCDAsyncSerialQueue(char *queue_name,EasyVoidBlock block);
+void easyGCDAsyncSerialQueue(char * _Nullable queue_name,EasyVoidBlock block);
 
 /**
  easy add block to async concurrent queue
@@ -92,7 +94,7 @@ void easyGCDAsyncSerialQueue(char *queue_name,EasyVoidBlock block);
  @param queue_name queue name
  @param block do something
  */
-void easyGCDAsyncConcurrentQueue(char *queue_name,EasyVoidBlock block);
+void easyGCDAsyncConcurrentQueue(char * _Nullable queue_name,EasyVoidBlock block);
 
 /**
  easy add block to async main queue
@@ -103,3 +105,5 @@ void easyGCDAsyncMainQueue(EasyVoidBlock block);
 
 
 @end
+
+NS_ASSUME_NONNULL_END

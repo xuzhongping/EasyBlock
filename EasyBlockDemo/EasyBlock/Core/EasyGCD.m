@@ -22,27 +22,22 @@ void easyUnLock(dispatch_semaphore_t lock){
     dispatch_semaphore_signal(lock);
 }
 
-
-
 dispatch_semaphore_t easyGetMultipleTaskLock(void){
     dispatch_semaphore_t multipleTaskLock = dispatch_semaphore_create(0);
     return multipleTaskLock;
 }
 
 void easyMultipleTaskLockCount(dispatch_semaphore_t lock, int taskCount,EasyVoidBlock block){
-    if (taskCount == 0) return;
-
+    NSParameteReturn(block);
+    NSParameteReturn(taskCount == 0);
     easyGCDAsyncSerialQueue(NULL, ^{
         for (int i = 0; i < taskCount; i++) {
             easyLock(lock);
         }
         easyGCDAsyncMainQueue(^{
-            if (block) {
                 block();
-            }
         });
     });
-    
 }
 void easyMultipleTaskUnlock(dispatch_semaphore_t lock){
     easyUnLock(lock);
@@ -58,11 +53,10 @@ dispatch_queue_t easyCGDGetSerialQueue(char *queue_name){
     return serialQueue;
 }
 void easyGCDAsyncSerialQueue(char *queue_name,EasyVoidBlock block){
+    NSParameteReturn(block);
     dispatch_queue_t serialQueue = easyCGDGetSerialQueue(queue_name);
     dispatch_async(serialQueue, ^{
-        if (block) {
             block();
-        }
     });
 }
 
@@ -75,21 +69,18 @@ dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name){
     return concurrentQueue;
 }
 void easyGCDAsyncConcurrentQueue(char *queue_name,EasyVoidBlock block){
-    
+    NSParameteReturn(block);
     dispatch_queue_t concurrentQueue = easyCGDGetConcurrentQueue(queue_name);
     dispatch_async(concurrentQueue, ^{
-        if (block) {
             block();
-        }
     });
 }
 
 void easyGCDAsyncMainQueue(EasyVoidBlock block){
+    NSParameteReturn(block);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     dispatch_async(mainQueue, ^{
-        if (block) {
             block();
-        }
     });
 }
 

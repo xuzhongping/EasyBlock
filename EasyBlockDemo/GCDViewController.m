@@ -32,15 +32,15 @@
 }
 - (IBAction)multipleTaskLock:(id)sender {
     dispatch_semaphore_t lock =  easyGetMultipleTaskLock();
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(""), ^{
         NSLog(@"任务一完成");
         easyMultipleTaskUnlock(lock);
     });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(""), ^{
         NSLog(@"任务二完成");
         easyMultipleTaskUnlock(lock);
     });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(""), ^{
         NSLog(@"任务三完成");
         easyMultipleTaskUnlock(lock);
     });

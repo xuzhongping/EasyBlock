@@ -11,9 +11,9 @@
 
 
 @interface EasyEventHandler : NSObject
-@property (nonatomic,  copy) id         handBlock;
-@property (nonatomic,  weak) id         source;
-@property (nonatomic,assign) CGFloat    ignoreDuration;
+@property (nonatomic,  copy) id       handBlock;
+@property (nonatomic,  weak) id       source;
+@property (nonatomic,assign) CGFloat  ignoreDuration;
 
 + (instancetype )handler;
 @end

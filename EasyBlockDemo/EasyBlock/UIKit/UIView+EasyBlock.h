@@ -9,24 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "EasyBlockHeader.h"
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIView (EasyBlock)
 
 /**
  add Gesture handle block
  
  @param gestureRecognizer gestureRecognizer instance
- @param handleBlock callback
+ @param block callback
  */
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock;
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
   add Gesture handle block , can set ignore duration
  
  @param gestureRecognizer gestureRecognizer instance
  @param duration ignore duration
- @param handleBlock callback
+ @param block callback
  */
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)handleBlock;
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(nullable EasyVoidIdBlock)block;
 
 
 /**
@@ -35,5 +38,7 @@
  @param gestureRecognizer gestureRecognizer instance
  @param handleBlock callback
  */
-- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock;
+- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(nullable EasyVoidBlock)handleBlock;
 @end
+
+NS_ASSUME_NONNULL_END

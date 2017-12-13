@@ -29,33 +29,30 @@
     }
     
     /*************************** handle source ********************************/
-    NSRange controlRange    = [aSelectorStr rangeOfString:EasyControlPrefix];
-    NSRange gestureRange    = [aSelectorStr rangeOfString:EasyGesturePrefix];
-    NSRange barButtonRange  = [aSelectorStr rangeOfString:EasyBarButtonAction];
     
     EasyVoidIdBlock block = nil;
     
     // if the selector from UIControlEvent
-    if (controlRange.length >= 1) {
-        NSString *controlEventStr = [aSelectorStr substringFromIndex:controlRange.location + controlRange.length];
-        NSUInteger controlEventType = [controlEventStr integerValue];
-        if (controlEventType &  0xFFFFFFFF) {
-            if (self.handBlock) {
-                block = self.handBlock;
-            }
+    if ([aSelectorStr containsString:EasyControlPrefix]) {
+        if (self.handBlock) {
+            block = self.handBlock;
         }
         
     // if the selector from UIGestureRecognizer
-    }else if (gestureRange.length >= 1){
+    }else if ([aSelectorStr containsString:EasyGesturePrefix]){
         if (self.handBlock) {
                 block = self.handBlock;
         }
         
     // if the selector from UIBarButtonItem action
-    }else if (barButtonRange.length >= 1){
+    }else if ([aSelectorStr containsString:EasyBarButtonPrefix]){
         if (self.handBlock) {
                 block = self.handBlock;
         }
+    }else{
+        NSString *errorDesc = [NSString stringWithFormat:@"[%@  %@]unrecognized selector sent to instance %p",[_source class],NSStringFromSelector(aSelector),_source];
+        NSAssert(false, errorDesc);
+        return [EasyEmpty empty];
     }
     
     if (!block) {

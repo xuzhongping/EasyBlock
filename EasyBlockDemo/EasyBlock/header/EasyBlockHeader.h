@@ -11,11 +11,14 @@
 
 #import "EasyBlock_typedef.h"
 
+#define NSParameteReturn(pr)\
+if (!(pr)) return;
+
+
 #define EasyControlPrefix @"EasyControlPrefix_"
 #define EasyGesturePrefix @"EasyGesturePrefix"
-#define EasyBarButtonAction @"EasyBarButtonAction"
+#define EasyBarButtonPrefix @"EasyBarButtonPrefix"
 
-#define EasyTupleElementKey @"EasyTupleElementKey"
 
 #endif /* EasyBlockHeader_h */
 

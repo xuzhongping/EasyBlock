@@ -15,14 +15,12 @@
 @property dispatch_semaphore_t  lock;
 @end
 @implementation UIView (EasyBlock)
-static const char * property_HandlePoolKey = "property_HandlePoolKey";
-static const char * property_lockKey       = "property_lockKey";
 
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
     [self addGestureRecognizer:gestureRecognizer ignoreDuration:0.0 handleBlock:handleBlock];
 }
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)handleBlock{
-    
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
+    NSParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     
     EasyEventHandler *handle = [EasyEventHandler handler];
@@ -36,37 +34,35 @@ static const char * property_lockKey       = "property_lockKey";
     easyUnLock([self lock]);
     
     [handlePool addObject:handle];
-    [handle setHandBlock:handleBlock];
+    [handle setHandBlock:block];
     [handle setSource:gestureRecognizer];
     [handle setIgnoreDuration:duration];
     [self addGestureRecognizer:gestureRecognizer];
     [gestureRecognizer addTarget:handle action:NSSelectorFromString([NSString stringWithFormat:@"%@%ld",EasyGesturePrefix,gestureRecognizer.hash])];
 }
-- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
+- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidBlock)block{
+    NSParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];
     [handlePool removeAllObjects];
     [self removeGestureRecognizer:gestureRecognizer];
-    
-    if (handleBlock) {
-        handleBlock(nil);
-    }
+    block();
 }
 #pragma mark - set && get
 
 - (void)setHandlePoolPropertyForInstance:(id)instance{
-    objc_setAssociatedObject(instance, property_HandlePoolKey,@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(instance, @selector(getHandlePoolPropertyForInstance:),@[].mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSMutableArray *)getHandlePoolPropertyForInstance:(id)instance{
-    return objc_getAssociatedObject(instance, property_HandlePoolKey);
+    return objc_getAssociatedObject(instance, @selector(getHandlePoolPropertyForInstance:));
 }
 
 - (void)setSemaphoreLock:(dispatch_semaphore_t)lock{
-    objc_setAssociatedObject(self, property_lockKey,lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(getSemaphoreLock),lock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (dispatch_semaphore_t)getSemaphoreLock{
-    return objc_getAssociatedObject(self, property_lockKey);
+    return objc_getAssociatedObject(self, @selector(getSemaphoreLock));
 }
 
 - (dispatch_semaphore_t)lock{

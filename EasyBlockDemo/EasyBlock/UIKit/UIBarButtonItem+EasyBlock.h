@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EasyBlockHeader.h"
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIBarButtonItem (EasyBlock)
 
@@ -16,7 +17,7 @@
  
  @param block callback
  */
-- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block;
+- (void)addTouchEventHandleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
  add touchEvent handle block,can set ignore duration
@@ -24,5 +25,7 @@
  @param block callback
  @param duration ignore duration
  */
-- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration;
+- (void)addTouchEventHandleBlock:(nullable EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration;
 @end
+
+NS_ASSUME_NONNULL_END
