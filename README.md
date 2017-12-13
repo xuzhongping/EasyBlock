@@ -2,6 +2,7 @@
 [![Version](https://img.shields.io/cocoapods/v/EasyBlock.svg?style=flat)](http://cocoapods.org/pods/EasyBlock)
 [![Pod License](http://img.shields.io/cocoapods/l/EasyBlock.svg?style=flat)](https://opensource.org/licenses/MIT)
 ![](https://img.shields.io/badge/language-objc-orange.svg)
+![iOS 6.0+](https://img.shields.io/badge/iOS-6.0%2B-blue.svg)
 
 ## 功能
 1. 将所有的 UIControlEvent 事件改由 Block 处理，无需再写 target-action
@@ -11,12 +12,11 @@
 5. 处理开发中经常遇到的多个请求回来时再做某些操作的问题，使用一个由 dispatch_semaphore_t 封装的 EasymultipleTaskLock 来处理这种场景
 
 ## 最近更新
-> 0.1.4
+* 0.1.4
 
-```
+
 增加可忽略时间，防止按钮或其他事件在一段时间内重复次数太多所造成的BUG
 
-```
 
 ## 使用方式
 1. 针对于 UIKit
