@@ -13,14 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIBarButtonItem (EasyBlock)
 
 /**
- add touchEvent handle block
+ Add a block for observe touch event.
  
  @param block callback
  */
 - (void)addTouchEventHandleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
- add touchEvent handle block,can set ignore duration
+ Add a block for observe touch event,and set ignore duration.
  
  @param block callback
  @param duration ignore duration

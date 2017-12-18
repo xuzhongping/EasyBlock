@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (EasyBlock)
 
 /**
- add Gesture handle block
+ Add a block for observe gesture.
  
  @param gestureRecognizer gestureRecognizer instance
  @param block callback
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
-  add Gesture handle block , can set ignore duration
+  Add a block for observe gesture, and set ignore duration.
  
  @param gestureRecognizer gestureRecognizer instance
  @param duration ignore duration
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- remove Gesture
+ Add a block for observe remove gesture.
  
  @param gestureRecognizer gestureRecognizer instance
  @param handleBlock callback

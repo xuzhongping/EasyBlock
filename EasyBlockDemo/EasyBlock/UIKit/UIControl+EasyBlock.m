@@ -15,7 +15,7 @@
 @interface UIControl ()
 
 /**
- 这个数组是为了handle的保留
+ The array for retain handler.
  */
 @property NSMutableArray         *handleCallBackPool;
 @property dispatch_semaphore_t   lock;

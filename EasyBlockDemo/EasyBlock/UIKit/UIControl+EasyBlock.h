@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIControl (EasyBlock)
 
 /**
- add block handle event
+ Add a block for observe event.
  
  @param event event type
  @param block callback
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addEvent:(UIControlEvents)event handleBlock:(nullable EasyVoidIdBlock)block;
 
 /**
- add block handle event,can set ignore duration
+ Add a block for observe event,and set ignore duration.
  
  @param event event type
  @param duration ignore duration

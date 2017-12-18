@@ -14,34 +14,32 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EasyGCD : NSObject
 
 /**
- easy creat a lock instance
-
+ Creat a lock instance.
  @return lock instance
  */
 dispatch_semaphore_t easyGetLock(void);
 
 /**
- 
- @param lock lock instance
+ Lock up.
+ @param lock instance
  */
 void easyLock(dispatch_semaphore_t lock);
 
 /**
- unlock
+ Unlock.
  
- @param lock lock instance
+ @param lock instance
  */
 void easyUnLock(dispatch_semaphore_t lock);
 
 
 /**
- * warning： when you use the multipleTaskLock,
- * should set task count , and unlock count same
- * count
+ * warning： When you use a multipleTaskLock,
+ * need set tasks count , and unlock count same.
  */
 
 /**
- easy creat a multiple task lock
+ Creat a multiple task lock
  
  @return lock instance
  */
@@ -49,7 +47,7 @@ dispatch_semaphore_t easyGetMultipleTaskLock(void);
 
 
 /**
- lock and set lock count
+ Lock up and set locks count.
  
  @param lock lock instance
  @param taskCount task count
@@ -59,50 +57,49 @@ void easyMultipleTaskLockCount(dispatch_semaphore_t lock, int taskCount,EasyVoid
 
 
 /**
- unlock
+ Unlock.
  
  @param lock lock instance
  */
 void easyMultipleTaskUnlock(dispatch_semaphore_t lock);
 
 /**
- easy create a serial queue
+  Create a serial queue.
  
- @param queue_name queue name
+ @param queue_name queue's name
  @return queue
  */
 dispatch_queue_t easyCGDGetSerialQueue(char *queue_name);
 /**
- easy create a concurrent queue
+ Create a concurrent queue.
  
- @param queue_name queue name
+ @param queue_name queue's name
  @return queue
  */
 dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name);
 
 /**
- easy add block to async serial queue
+  Add a block to async's serial queue.
  
- @param queue_name queue name
+ @param queue_name queue's name
  @param block do something
  */
 void easyGCDAsyncSerialQueue(char * _Nullable queue_name,EasyVoidBlock block);
 
 /**
- easy add block to async concurrent queue
+  Add a block to async's concurrent queue.
  
- @param queue_name queue name
+ @param queue_name queue's name
  @param block do something
  */
 void easyGCDAsyncConcurrentQueue(char * _Nullable queue_name,EasyVoidBlock block);
 
 /**
- easy add block to async main queue
+  Add block to async's main queue.
  
  @param block do something
  */
 void easyGCDAsyncMainQueue(EasyVoidBlock block);
-
 
 @end
 
