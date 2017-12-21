@@ -29,7 +29,7 @@ dispatch_semaphore_t easyGetMultipleTaskLock(void){
 
 void easyMultipleTaskLockCount(dispatch_semaphore_t lock, int taskCount,EasyVoidBlock block){
     NSParameteReturn(block);
-    NSParameteReturn(taskCount == 0);
+    NSParameteReturn(taskCount);
     easyGCDAsyncSerialQueue(NULL, ^{
         for (int i = 0; i < taskCount; i++) {
             easyLock(lock);

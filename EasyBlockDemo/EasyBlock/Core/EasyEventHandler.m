@@ -32,19 +32,19 @@
     
     EasyVoidIdBlock block = nil;
     
-    // if the selector from UIControlEvent
+    // If the selector from UIControlEvent:
     if ([aSelectorStr containsString:EasyControlPrefix]) {
         if (self.handBlock) {
             block = self.handBlock;
         }
         
-    // if the selector from UIGestureRecognizer
+        // If the selector from UIGestureRecognizer:
     }else if ([aSelectorStr containsString:EasyGesturePrefix]){
         if (self.handBlock) {
                 block = self.handBlock;
         }
         
-    // if the selector from UIBarButtonItem action
+        // If the selector from UIBarButtonItem action:
     }else if ([aSelectorStr containsString:EasyBarButtonPrefix]){
         if (self.handBlock) {
                 block = self.handBlock;
