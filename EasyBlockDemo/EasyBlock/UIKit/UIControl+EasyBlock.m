@@ -29,7 +29,7 @@
 
 - (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
     
-    NSParameteReturn(block);
+    ESParameteReturn(block);
     NSParameterAssert(event);
     
     NSString *controlEventStr = [NSString stringWithFormat:@"%@%ld",EasyControlPrefix,event];
@@ -64,16 +64,18 @@
 }
 
 - (dispatch_semaphore_t)lock{
-    if (![self getSemaphoreLock]) {
+    dispatch_semaphore_t lock = [self getSemaphoreLock];
+    if (!lock) {
         [self setSemaphoreLock:easyGetLock()];
     }
-    return [self getSemaphoreLock];
+    return lock?:[self getSemaphoreLock];
 }
 - (NSMutableArray *)handleCallBackPool{
-    if (![self getHandlePoolProperty]) {
+    NSMutableArray *handleCallBackPool = [self getHandlePoolProperty];
+    if (!handleCallBackPool) {
         [self setHandlePoolProperty];
     }
-    return [self getHandlePoolProperty];
+    return handleCallBackPool?:[self getHandlePoolProperty];
 }
 
 @end

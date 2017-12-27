@@ -11,7 +11,7 @@
 
 #import "EasyBlock_typedef.h"
 
-#define NSParameteReturn(pr)\
+#define ESParameteReturn(pr)\
 if (!(pr)) return;
 
 

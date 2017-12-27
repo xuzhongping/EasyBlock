@@ -20,7 +20,7 @@
     [self addGestureRecognizer:gestureRecognizer ignoreDuration:0.0 handleBlock:handleBlock];
 }
 - (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
-    NSParameteReturn(block);
+    ESParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     
     EasyEventHandler *handle = [EasyEventHandler handler];
@@ -41,7 +41,7 @@
     [gestureRecognizer addTarget:handle action:NSSelectorFromString([NSString stringWithFormat:@"%@%ld",EasyGesturePrefix,gestureRecognizer.hash])];
 }
 - (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidBlock)block{
-    NSParameteReturn(block);
+    ESParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     
     NSMutableArray *handlePool = [self getHandlePoolPropertyForInstance:gestureRecognizer];
@@ -66,9 +66,10 @@
 }
 
 - (dispatch_semaphore_t)lock{
-    if (![self getSemaphoreLock]) {
+    dispatch_semaphore_t lock = [self getSemaphoreLock];
+    if (!lock) {
         [self setSemaphoreLock:easyGetLock()];
     }
-    return [self getSemaphoreLock];
+    return lock?:[self getSemaphoreLock];
 }
 @end

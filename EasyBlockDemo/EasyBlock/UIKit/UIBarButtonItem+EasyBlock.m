@@ -23,7 +23,7 @@
     [self addTouchEventHandleBlock:block ignoreDuration:0.0];
 }
 - (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration{
-    NSParameteReturn(block);
+    ESParameteReturn(block);
     EasyEventHandler *handle = [EasyEventHandler handler];
     easyLock([self lock]);
     NSMutableArray *handlePool = [self handleCallBackPool];
@@ -55,15 +55,18 @@
 }
 
 - (dispatch_semaphore_t)lock{
-    if (![self getSemaphoreLock]) {
+    dispatch_semaphore_t lock = [self getSemaphoreLock];
+    if (!lock) {
         [self setSemaphoreLock:easyGetLock()];
     }
-    return [self getSemaphoreLock];
+    return lock?:[self getSemaphoreLock];
 }
 - (NSMutableArray *)handleCallBackPool{
-    if (![self getHandlePoolProperty]) {
+    NSMutableArray *handleCallBackPool = [self getHandlePoolProperty];
+    if (!handleCallBackPool) {
         [self setHandlePoolProperty];
     }
-    return [self getHandlePoolProperty];
+    return handleCallBackPool?:[self getHandlePoolProperty];
 }
+
 @end
