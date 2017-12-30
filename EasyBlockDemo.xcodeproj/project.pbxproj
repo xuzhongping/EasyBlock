@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED0921731F9D94D000C57839 /* EasyEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0921721F9D94D000C57839 /* EasyEventHandler.m */; };
+		ED12A0BE1FF7AF740043BA67 /* EasyTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A0BD1FF7AF740043BA67 /* EasyTimer.m */; };
 		ED16BADC1EF177090051D99F /* EasyGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED16BADB1EF177090051D99F /* EasyGCD.m */; };
 		ED2BA96A1EF3755D002CE5F7 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BA9691EF3755D002CE5F7 /* GCDViewController.m */; };
 		ED4118311EB8C7D9001DC10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4118301EB8C7D9001DC10B /* main.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		ED0921711F9D94D000C57839 /* EasyEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyEventHandler.h; sourceTree = "<group>"; };
 		ED0921721F9D94D000C57839 /* EasyEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyEventHandler.m; sourceTree = "<group>"; };
+		ED12A0BC1FF7AF740043BA67 /* EasyTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTimer.h; sourceTree = "<group>"; };
+		ED12A0BD1FF7AF740043BA67 /* EasyTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyTimer.m; sourceTree = "<group>"; };
 		ED16BADA1EF177090051D99F /* EasyGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyGCD.h; sourceTree = "<group>"; };
 		ED16BADB1EF177090051D99F /* EasyGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyGCD.m; sourceTree = "<group>"; };
 		ED2BA9681EF3755D002CE5F7 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				ED4118691EB8D8EA001DC10B /* EasyEmpty.m */,
 				ED16BADA1EF177090051D99F /* EasyGCD.h */,
 				ED16BADB1EF177090051D99F /* EasyGCD.m */,
+				ED12A0BC1FF7AF740043BA67 /* EasyTimer.h */,
+				ED12A0BD1FF7AF740043BA67 /* EasyTimer.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				ED2BA96A1EF3755D002CE5F7 /* GCDViewController.m in Sources */,
 				ED7904F91EF37DCD00CA5DEB /* UIBarButtonItem+EasyBlock.m in Sources */,
 				ED0921731F9D94D000C57839 /* EasyEventHandler.m in Sources */,
+				ED12A0BE1FF7AF740043BA67 /* EasyTimer.m in Sources */,
 				ED4118341EB8C7D9001DC10B /* AppDelegate.m in Sources */,
 				ED4118311EB8C7D9001DC10B /* main.m in Sources */,
 			);

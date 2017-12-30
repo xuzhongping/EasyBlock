@@ -41,11 +41,11 @@
 //    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
 //
 //    }];
-    [self.btnOne addEVent:UIControlEventTouchUpInside ignoreDuration:2.0 handleBlock:^(id instanceSelf) {
-        NSLog(@"%@被点击了1",instanceSelf);
+    [self.btnOne addEVent:UIControlEventTouchUpInside ignoreDuration:2.0 handleBlock:^(id instance) {
+        NSLog(@"%@被点击了1",instance);
     }];
-    [self.view addGestureRecognizer:[UITapGestureRecognizer new] ignoreDuration:2.0 handleBlock:^(id instanceSelf) {
-        NSLog(@"%@",instanceSelf);
+    [self.view addGestureRecognizer:[UITapGestureRecognizer new] ignoreDuration:2.0 handleBlock:^(id instance) {
+        NSLog(@"%@",instance);
     }];
 //    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
 //       

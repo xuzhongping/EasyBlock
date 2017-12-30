@@ -25,7 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param block callback
  @param duration ignore duration
  */
-- (void)addTouchEventHandleBlock:(nullable EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration;
+- (void)addTouchEventHandleBlock:(nullable EasyVoidIdBlock)block
+                  ignoreDuration:(CGFloat)duration;
 @end
 
 NS_ASSUME_NONNULL_END

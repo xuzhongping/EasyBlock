@@ -16,10 +16,13 @@
 @end
 @implementation UIView (EasyBlock)
 
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidIdBlock)handleBlock{
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+                 handleBlock:(EasyVoidIdBlock)handleBlock{
     [self addGestureRecognizer:gestureRecognizer ignoreDuration:0.0 handleBlock:handleBlock];
 }
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+              ignoreDuration:(CGFloat)duration
+                 handleBlock:(EasyVoidIdBlock)block{
     ESParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     
@@ -40,7 +43,8 @@
     [self addGestureRecognizer:gestureRecognizer];
     [gestureRecognizer addTarget:handle action:NSSelectorFromString([NSString stringWithFormat:@"%@%ld",EasyGesturePrefix,gestureRecognizer.hash])];
 }
-- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer handleBlock:(EasyVoidBlock)block{
+- (void)removeGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+                    handleBlock:(EasyVoidBlock)block{
     ESParameteReturn(block);
     NSParameterAssert(gestureRecognizer);
     

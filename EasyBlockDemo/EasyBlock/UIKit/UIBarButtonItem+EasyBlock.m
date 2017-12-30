@@ -22,7 +22,8 @@
 - (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block{
     [self addTouchEventHandleBlock:block ignoreDuration:0.0];
 }
-- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block ignoreDuration:(CGFloat)duration{
+- (void)addTouchEventHandleBlock:(EasyVoidIdBlock)block
+                  ignoreDuration:(CGFloat)duration{
     ESParameteReturn(block);
     EasyEventHandler *handle = [EasyEventHandler handler];
     easyLock([self lock]);

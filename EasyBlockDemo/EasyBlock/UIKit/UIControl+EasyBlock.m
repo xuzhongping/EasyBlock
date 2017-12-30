@@ -23,11 +23,14 @@
 
 @implementation UIControl (EasyBlock)
 
-- (void)addEvent:(UIControlEvents)event handleBlock:(EasyVoidIdBlock)block{
+- (void)addEvent:(UIControlEvents)event
+     handleBlock:(EasyVoidIdBlock)block{
     [self addEVent:event ignoreDuration:0.0 handleBlock:block];
 }
 
-- (void)addEVent:(UIControlEvents)event ignoreDuration:(CGFloat)duration handleBlock:(EasyVoidIdBlock)block{
+- (void)addEVent:(UIControlEvents)event
+  ignoreDuration:(CGFloat)duration
+     handleBlock:(EasyVoidIdBlock)block{
     
     ESParameteReturn(block);
     NSParameterAssert(event);

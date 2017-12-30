@@ -53,7 +53,9 @@ dispatch_semaphore_t easyGetMultipleTaskLock(void);
  @param taskCount task count
  
  */
-void easyMultipleTaskLockCount(dispatch_semaphore_t lock, int taskCount,EasyVoidBlock block);
+void easyMultipleTaskLockCount(dispatch_semaphore_t lock,
+                               int taskCount,
+                               EasyVoidBlock block);
 
 
 /**
@@ -84,7 +86,8 @@ dispatch_queue_t easyCGDGetConcurrentQueue(char *queue_name);
  @param queue_name queue's name
  @param block do something
  */
-void easyGCDAsyncSerialQueue(char * _Nullable queue_name,EasyVoidBlock block);
+void easyGCDAsyncSerialQueue(char * _Nullable queue_name,
+                             EasyVoidBlock block);
 
 /**
   Add a block to async's concurrent queue.
@@ -92,7 +95,8 @@ void easyGCDAsyncSerialQueue(char * _Nullable queue_name,EasyVoidBlock block);
  @param queue_name queue's name
  @param block do something
  */
-void easyGCDAsyncConcurrentQueue(char * _Nullable queue_name,EasyVoidBlock block);
+void easyGCDAsyncConcurrentQueue(char * _Nullable queue_name,
+                                 EasyVoidBlock block);
 
 /**
   Add block to async's main queue.
