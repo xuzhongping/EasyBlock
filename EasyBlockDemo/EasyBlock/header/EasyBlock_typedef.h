@@ -13,6 +13,7 @@ typedef id(^EasyIdIdBlock)(id instance);
 typedef void(^EasyVoidIdBlock)(id instance);
 typedef void(^EasyVoidBlock)(void);
 
+
 #endif /* EasyBlock_typedef_h */
 
 

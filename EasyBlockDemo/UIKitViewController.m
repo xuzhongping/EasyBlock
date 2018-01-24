@@ -10,7 +10,7 @@
 #import "UIControl+EasyBlock.h"
 #import "UIView+EasyBlock.h"
 #import "UIBarButtonItem+EasyBlock.h"
-
+#import "EasyKVO.h"
 
 @interface UIKitViewController ()<UITextViewDelegate>
 @property (nonatomic, strong) UIButton *btnOne;
@@ -43,25 +43,15 @@
 //    }];
     [self.btnOne addEVent:UIControlEventTouchUpInside ignoreDuration:2.0 handleBlock:^(id instance) {
         NSLog(@"%@被点击了1",instance);
+        [self.btnOne setFrame:CGRectMake(0, 0, 30, 30)];
     }];
     [self.view addGestureRecognizer:[UITapGestureRecognizer new] ignoreDuration:2.0 handleBlock:^(id instance) {
         NSLog(@"%@",instance);
     }];
-//    [self.btnOne addEvent:UIControlEventTouchUpInside handleBlock:^(id instanceSelf) {
-//       
-//    }];
-//    
-//    [self.view addGestureRecognizer:[UITapGestureRecognizer new] handleBlock:^(id instanceSelf) {
-//        NSLog(@"%@",instanceSelf);
-//    }];
-//    [self.view addGestureRecognizer:self.longG handleBlock:^(id instanceSelf) {
-//        NSLog(@"%@",instanceSelf);
-//    }];
-//    [self.swith addEvent:UIControlEventValueChanged handleBlock:^(id instanceSelf) {
-//        NSLog(@"%@",instanceSelf);
-//    }];
-//    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
-//    NSLog(@"%@",path);
+    EasyObserver(self.btnOne,frame , ^(id new,id old){
+        NSLog(@"%@-%@",new,old);
+    });
+
 }
 
 
