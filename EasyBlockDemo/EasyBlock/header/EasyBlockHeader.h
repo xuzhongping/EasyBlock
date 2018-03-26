@@ -15,9 +15,14 @@
 if (!(pr)) return;
 
 
-#define EasyControlPrefix @"EasyControlPrefix_"
-#define EasyGesturePrefix @"EasyGesturePrefix"
-#define EasyBarButtonPrefix @"EasyBarButtonPrefix"
+#define EasyControlPrefix \
+@"EasyControlPrefix_"
+
+#define EasyGesturePrefix \
+@"EasyGesturePrefix"
+
+#define EasyBarButtonPrefix \
+@"EasyBarButtonPrefix"
 
 
 #endif /* EasyBlockHeader_h */

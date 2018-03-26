@@ -10,10 +10,17 @@
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
+#define EasyObj \
+\
+[[EasyKVO alloc]init]
 
-#define EasyObj [[EasyKVO alloc]init]
-#define EasyObserver(OBJ,KEY,BLOCK) [EasyObj easyObserveObj:OBJ keyPath:@(((void)OBJ.KEY, #KEY)) changed:BLOCK]
-#define EasyOvertObserver(OBJ,KEY,BLOCK) [EasyObj easyObserveObj:OBJ keyPath:@(((void)OBJ.KEY, #KEY)) changed:BLOCK overt:YES]
+#define EasyObserver(OBJ,KEY,BLOCK) \
+\
+[EasyObj easyObserveObj:OBJ keyPath:@(((void)OBJ.KEY, #KEY)) changed:BLOCK]
+
+#define EasyOvertObserver(OBJ,KEY,BLOCK) \
+\
+[EasyObj easyObserveObj:OBJ keyPath:@(((void)OBJ.KEY, #KEY)) changed:BLOCK overt:YES]
 
 typedef void(^EasyKVOBlock)(id newValue,id oldValue);
 @interface EasyKVO : NSObject
@@ -25,20 +32,19 @@ typedef void(^EasyKVOBlock)(id newValue,id oldValue);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 NS_ASSUME_NONNULL_END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

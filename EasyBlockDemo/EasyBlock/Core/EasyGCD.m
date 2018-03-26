@@ -83,6 +83,4 @@ void easyGCDAsyncMainQueue(EasyVoidBlock block){
             block();
     });
 }
-
-
 @end
