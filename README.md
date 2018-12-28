@@ -32,29 +32,29 @@
 
 2. 针对 GCD 的封装api
 ```
-	// 获得一个锁对象，上锁与解锁
-	dispatch_semaphore_t lock = easyGetLock();
-	easyLock(lock);
-	easyUnLock(lock);
+// 获得一个锁对象，上锁与解锁
+    dispatch_semaphore_t lock = easyGetLock();
+    easyLock(lock);
+    easyUnLock(lock);
    
-   // 针对多任务的 easyGetMultipleTaskLock
-       dispatch_semaphore_t lock =  easyGetMultipleTaskLock();
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
-        NSLog(@"任务一完成");
-        easyMultipleTaskUnlock(lock);
-    });
+// 针对多任务的 easyGetMultipleTaskLock
+   dispatch_semaphore_t lock =  easyGetMultipleTaskLock();
+   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
+    NSLog(@"任务一完成");
+    easyMultipleTaskUnlock(lock);
+});
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
-        NSLog(@"任务二完成");
-        easyMultipleTaskUnlock(lock);
-    });
+    NSLog(@"任务二完成");
+    easyMultipleTaskUnlock(lock);
+});
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), easyCGDGetConcurrentQueue(NULL), ^{
-        NSLog(@"任务三完成");
-        easyMultipleTaskUnlock(lock);
-    });
-    // 第二个参数输入锁的数量
+    NSLog(@"任务三完成");
+    easyMultipleTaskUnlock(lock);
+});
+// 第二个参数输入锁的数量
     easyMultipleTaskLockCount(lock, 3, ^{
-        NSLog(@"任务全部完成");
-    });
+    NSLog(@"任务全部完成");
+});
 ```
 
 ## 支持Cocoapods
