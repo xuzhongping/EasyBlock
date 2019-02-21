@@ -13,7 +13,7 @@
 
 @interface EasyKVO()
 {
-    __weak id       _target;
+    id       _target;
     BOOL            _overt;
     NSString        *_keyPath;
     EasyKVOBlock    _block;
