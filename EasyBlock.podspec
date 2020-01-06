@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "EasyBlock"
-  s.version      = "0.1.7"
+  s.version      = "0.1.8"
   s.summary      = "a easy function for Block"
 
   s.platform     = :ios, '6.0'
@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/JungHsu/EasyBlock.git", :tag => "#{s.version}" }
   s.source_files  = "EasyBlockDemo/EasyBlock/**/*.{h,m}"
+  s.module_map = "EasyBlockDemo/EasyBlock/Files/EasyBlock.modulemap"
   s.requires_arc = true
 
 end

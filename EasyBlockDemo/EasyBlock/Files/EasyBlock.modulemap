@@ -1,0 +1,7 @@
+framework module EasyBlock {
+  umbrella header "EasyBlock.h"
+
+  export *
+  module * { export * }
+}
+
